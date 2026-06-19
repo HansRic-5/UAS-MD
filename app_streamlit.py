@@ -7,7 +7,7 @@ st.set_page_config(page_title="Credit Score Predictor", layout="wide")
 
 @st.cache_resource
 def load_model():
-    model_path = Path(__file__).parent / "artifacts" / "best_model.joblib"
+    model_path = "best_model.joblib"
     if model_path.exists():
         return joblib.load(model_path)
     return None
